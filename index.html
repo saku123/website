@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Continuous scrolling - fullPage.js</title>
+    <meta name="author" content="Matthew Howell" />
+    <meta name="description" content="fullPage continuous scrolling demo." />
+    <meta name="keywords"  content="fullpage,jquery,demo,scroll,loop,continuous" />
+    <meta name="Resource-type" content="Document" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+</head>
+<body class="index">
+
+<header class="header animated fadeInDown">
+    <div class="logo"><a href="index.html"></a></div>
+    <div id="menu" class="clearfix menu">
+        <ul class="clearfix">
+            <li data-menuanchor="home" class="active">
+                <a href="#home">首页</a>
+            </li>
+            <li data-menuanchor="service">
+                <a href="#service">服务</a>
+            </li>
+            <li data-menuanchor="news">
+                <a href="#news">动态</a>
+            </li>
+            <li data-menuanchor="aboutUs">
+                <a href="#aboutUs">关于</a>
+            </li>
+            <li data-menuanchor="contactUs">
+                <a href="#contactUs">联系</a>
+            </li>
+            <li data-menuanchor="partner">
+                <a href="#partner">伙伴</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+
+<div id="fullpage">
+    <div class="section active">
+        <div id="scene">
+            <li class="layer" data-depth="1" style="color: #fff;">
+                <h2 class="animated fadeInUp" style="display: block;text-align: center">专注区块链生态安全</h2>
+                <p class="a-delay1 animated fadeInUp" style="display: block;text-align: center">“慢雾”，区块链黑暗森林中的安全区域</p>
+            </li>
+        </div>
+        <a href="#service" class="icon-arrow" style="display: block;"></a>
+    </div>
+    <div class="section">
+        <h1 style="text-align: center;color: #fff">service</h1>
+    </div>
+    <div class="section">
+        <div class="intro">
+            <h1 style="text-align: center;color: #fff">news</h1>
+        </div>
+    </div>
+    <div class="section">
+        <div class="intro">
+            <h1 style="text-align: center;color: #fff">aboutUs</h1>
+        </div>
+    </div>
+    <div class="section">
+        <div class="intro">
+            <h1 style="text-align: center;color: #fff">contactUs</h1>
+        </div>
+    </div>
+    <div class="section">
+        <div class="intro">
+            <h1 style="text-align: center;color: #fff">partner</h1>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+<script type="text/javascript">
+    $('#fullpage').fullpage({
+        anchors: ['home', 'service', 'news', 'aboutUs', 'contactUs','partner'],
+        menu: '#menu',
+        navigation: true,
+        slidesNavigation: true,
+        lazyLoad: true,
+        css3:true
+    });
+
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);
+</script>
+
+</body>
+</html>

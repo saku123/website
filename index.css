@@ -1,0 +1,115 @@
+body, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ul, ol, li, fieldset, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+    color: #333;
+    font-size: 12px;
+}
+
+body.index {
+    background: url(images/bg2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    height: 0;
+    content: "\0020"
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #333;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 99999;
+}
+
+.header .logo {
+    float: left;
+    margin-top:12px;
+    margin-left: 18px;
+    width: 178px;
+    height: 40px;
+    background: url(images/logo.png) no-repeat 0 50%;
+    background-size: contain;
+    transition: all .8s ease;
+}
+
+.header .menu {
+    float: right;
+    padding-right: 1rem;
+}
+
+.header .menu li {
+    float: left;
+    margin-left: 40px;
+    padding-top: 12px;
+    list-style: none;
+}
+
+.header .menu li.active a {
+    border-bottom: 1px solid #fff;
+}
+
+.header #menu li a:hover {
+    border-bottom: 1px solid #bbb;
+    color: #ddd;
+}
+
+.header li a {
+    color: #fff;
+    padding: 6px;
+    display: block;
+    border-bottom: 1px solid transparent;
+    transition: all .8s ease;
+}
+
+#fp-nav ul li a span {
+    background: #fff;
+}
+
+.bg-test{
+    background-size: 100% 110%;
+}
+
+.icon-arrow {
+    position: fixed;
+    z-index: 99999;
+    left: 50%;
+    bottom: 30px;
+    width: 34px;
+    height: 34px;
+    margin-left: -17px;
+    background: url(images/icon-arrow.png) no-repeat 50% 50%;
+    background-size: 20px auto;
+    -webkit-animation: arrowdou .5s infinite linear;
+    -moz-animation: arrowdou .5s infinite linear;
+    -o-animation: arrowdou .5s infinite linear;
+    animation: arrowdou .5s infinite linear;
+}
+
+@-webkit-keyframes arrowdou { 0% {bottom: 30px;} 50% {bottom: 35px;} 100% {bottom: 30px;}}
+@-moz-keyframes arrowdou { 0% {bottom: 30px;} 50% {bottom: 35px;} 100% {bottom: 30px;}}
+@-o-keyframes arrowdou { 0% {bottom: 30px;} 50% {bottom: 35px;} 100% {bottom: 30px;}}
+@keyframes arrowdou { 0% {bottom: 30px;} 50% {bottom: 35px;} 100% {bottom: 30px;}}
